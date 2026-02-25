@@ -1,0 +1,17 @@
+package com.medapp.order.entity;
+
+public enum OrderStatus {
+    CREATED,
+    PRESCRIPTION_PENDING,
+    PRESCRIPTION_APPROVED,
+    PAYMENT_PENDING,
+    PAYMENT_SUCCESS,
+    PHARMACY_ACCEPTED,
+    READY_FOR_PICKUP,
+    RIDER_ASSIGNED,
+    OUT_FOR_DELIVERY,
+    DELIVERED,
+    CANCELLED,
+    REJECTED,
+    REFUNDED
+}

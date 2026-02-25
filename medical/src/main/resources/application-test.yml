@@ -1,0 +1,38 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:medapp_test;MODE=MySQL;DB_CLOSE_DELAY=-1;DATABASE_TO_UPPER=false
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    open-in-view: false
+  flyway:
+    enabled: false
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      repositories:
+        enabled: false
+  cache:
+    type: simple
+
+app:
+  rate-limit:
+    enabled: false
+  jwt:
+    secret: test-secret-key-test-secret-key-123456
+    access-token-ttl-seconds: 900
+    refresh-token-ttl-seconds: 3600
+    issuer: medapp-test
+  otp:
+    mock-enabled: true
+    ttl-seconds: 300
+  cors:
+    allowed-origins: http://localhost:3000
+  payment:
+    razorpay:
+      key-id: test_key
+      webhook-secret: test_secret
